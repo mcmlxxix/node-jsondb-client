@@ -1,2 +1,2 @@
-# node-jsondb
-JSON database for use with things that are awesome
+# node-jsondb-client
+Socket client for use with node-jsondb-srv

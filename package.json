@@ -1,0 +1,22 @@
+{
+	"name": "node-jsondb-client",
+	"description": "jsondb-client: Socket client for remote interaction with json database",
+	"version": "1.0",
+	"author": {
+		"name": "Matt Johnson",
+		"email": "mdj1979@gmail.com"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/mcmlxxix/node-jsondb-client.git"
+	},
+	"bugs": {
+		"url": "https://github.com/mcmlxxix/node-jsondb-client/issues"
+	},
+	"licenses": [{
+		"type": "MIT",
+		"url": "https://github.com/mcmlxxix/node-jsondb-client/LICENSE-MIT"
+	}],
+	"main": "./lib/node-jpath",
+	"keywords": ["utility", "json", "jpath", "database", "objects"]
+}

@@ -19,7 +19,7 @@ JSONClient.prototype.connect = function() {
 	this.socket = connect.call(this);
 }
 JSONClient.prototype.disconnect = function() {
-	this.socket.close();
+	disconnect.call(this);
 }
 JSONClient.prototype.auth = function(callback,user,pass) {
 	var request = auth.call(this,user,pass);
@@ -84,7 +84,7 @@ function onError(e) {
 }
 function onReceive(str) {
 	var request = tx.decode(JSON.parse(str));
-	handleCallback(request);
+	handleCallback.call(this,request);
 	return request;
 }
 
@@ -130,10 +130,10 @@ function write(path,data) {
 	return new Request(oper.WRITE,this.db,data);
 }
 function subscribe(path) {
-	return new Request(oper.SUBSCRIBE,this.db,qid);
+	return new Request(oper.SUBSCRIBE,this.db,[{path:path}]);
 }
 function unsubscribe(path) {
-	return new Request(oper.UNSUBSCRIBE,this.db,qid);
+	return new Request(oper.UNSUBSCRIBE,this.db,[{path:path}]);
 }
 
 /* initialization */

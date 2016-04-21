@@ -1,7 +1,7 @@
 {
 	"name": "node-jsondb-client",
 	"description": "jsondb-client: Socket client for remote interaction with json database",
-	"version": "1.0",
+	"version": "1.0.0",
 	"author": {
 		"name": "Matt Johnson",
 		"email": "mdj1979@gmail.com"

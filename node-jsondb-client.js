@@ -49,6 +49,10 @@ JSONClient.prototype.unsubscribe = function(callback,path) {
 	var request = unsubscribe.call(this,path);
 	handleRequest.call(this,callback,request,true);
 };
+JSONClient.prototype.request = function(callback,oper,data) {
+	var request = new Request(oper,this.db,data);
+	handleRequest.call(this,callback,request,false);
+}
 
 /* query object */
 function Request(oper,db,data,lock) {

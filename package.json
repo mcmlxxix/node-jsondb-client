@@ -19,7 +19,7 @@
       "url": "https://github.com/mcmlxxix/node-jsondb-client/LICENSE-MIT"
     }
   ],
-  "main": "./lib/node-jpath",
+  "main": "./node-jsondb-client",
   "keywords": [
     "utility",
     "json",

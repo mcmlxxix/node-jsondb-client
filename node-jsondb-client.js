@@ -1,4 +1,4 @@
-var net, fs, tx, constants, err, oper, lock, crypto;
+var net, fs, tx, err, oper, lock, crypto;
 
 function JSONClient(db,host,port) {
 	this.db = db;
@@ -142,15 +142,15 @@ function unsubscribe(path) {
 
 /* initialization */
 function init() {
-	constants = require('./lib/constant');
+	var defs = require('./lib/defs');
 	tx = require('./lib/transform');
 	net = require('net');
 	rl = require('readline');	
 	crypto = require('crypto');
 
-	err = constants.error;
-	oper = constants.oper;
-	lock = constants.lock;
+	err = defs.error;
+	oper = defs.oper;
+	lock = defs.lock;
 }
 
 /* goooooo */
